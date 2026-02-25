@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Sunrich Chemicals | Cosmetic Raw Material Company</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+header{
+    background:#0f172a;
+    color:white;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    margin:0;
+    color:#22c55e;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+nav a:hover{
+    color:#22c55e;
+}
+
+.hero{
+    background:linear-gradient(to right,#0f172a,#1e293b);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-top:10px;
+}
+
+.btn{
+    background:#22c55e;
+    padding:10px 20px;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    display:inline-block;
+    margin-top:20px;
+}
+
+.section{
+    padding:60px 50px;
+    text-align:center;
+}
+
+.section h2{
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#22c55e;
+}
+
+.contact{
+    background:#0f172a;
+    color:white;
+}
+
+.contact input, .contact textarea{
+    width:80%;
+    padding:10px;
+    margin:10px;
+    border:none;
+    border-radius:5px;
+}
+
+.contact button{
+    padding:10px 20px;
+    background:#22c55e;
+    border:none;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+    }
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav{
+        margin-top:10px;
+    }
+
+    .section{
+        padding:40px 20px;
+    }
+
+    .hero h1{
+        font-size:26px;
+    }
+
+    .contact input,
+    .contact textarea{
+        width:95%;
+    }
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2> Sunrich Chemicals</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Leading Cosmetic Raw Material Supplier</h1>
+    <p>High Quality Ingredients for Beauty & Personal Care Industry</p>
+    <a href="#contact" class="btn">contact us</a>
+</section>
+
+<section class="section" id="about">
+    <h2>About Us</h2>
+    <p>
+        Sunrich Chemicals is a trusted supplier of premium cosmetic raw materials.
+        We provide high quality ingredients for skincare, haircare, and personal care
+        manufacturers across India.
+    </p>
+</section>
+<section class="section" id="products">
+    <h2>Our Product Catalog</h2>
+
+    <div class="products-grid">
+
+        <div class="card">
+            <img src="C:\Users\Vivek Pawar\OneDrive\Pictures\image1.jpeg" width="100%" height="600" style="object-fit:cover;">
+            <h3>stearic acid</h3>
+            <p>and emulsifier,thickener and lubricant in cosmetics,soaps,and industrial products.</p>
+            <input type="number" id="qty1" placeholder="Quantity (35l)">
+            <button onclick="orderProduct('stearic acid', 'qty1')">Place Order</button>
+        </div>
+
+        <div class="card">
+            <img src="C:\Users\Vivek Pawar\OneDrive\Pictures\image.jpeg" width="100%" height="600" style="object-fit:cover;">
+            <h3>zinc pryithione</h3>
+            <p>widely used antimicrobial, antifungal, and antibacterial agent.</p>
+            <input type="number" id="qty2" placeholder="Quantity (25kg)">
+            <button onclick="orderProduct('zinc pryithione', 'qty2')">Place Order</button>
+        </div>
+
+        <div class="card">
+            <img src="C:\Users\Vivek Pawar\OneDrive\Pictures\WhatsApp Image 2026-02-25 at 5.19.13 PM.jpeg" width="100%" height="600" style="object-fit:cover;">
+            <h3>liquid benzyl alcohol</h3>
+            <p>Widely used as a versatile solvent, preservative in pharmaceuticals/cosmetics.</p>
+            <input type="number" id="qty3" placeholder="Quantity (25kg)">
+            <button onclick="orderProduct('liquid benzyl alcohol', 'qty3')">Place Order</button>
+        </div>
+
+<div class="card">
+            <img src="C:\Users\Vivek Pawar\OneDrive\Pictures\WhatsApp Image 2026-02-25 at 5.19.12 PM.jpeg" width="100%" height="600" style="object-fit:cover;">
+            <h3>salicylic acid</h3>
+            <p>white, crystalline, lipophilic beta-hydroxy acid (BHA) commonly used as a raw material in pharmaceuticals and cosmetics.</p>
+            <input type="number" id="qty2" placeholder="Quantity (25kg)">
+            <button onclick="orderProduct('salicylic acid', 'qty2')">Place Order</button>
+        </div>
+
+
+    </div>
+</section>
+<section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+
+    <input type="text" id="name" placeholder="Your Name"><br>
+    <input type="email" id="email" placeholder="Your Email"><br>
+    <textarea id="message" rows="4" placeholder="Your Message"></textarea><br>
+
+    <button onclick="sendEmail()">Send via Email</button>
+    <button onclick="sendWhatsApp()">Send via WhatsApp</button>
+</section>
+
+<script>
+function sendEmail() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let subject = "New Inquiry from " + name;
+    let body = "Name: " + name + "%0D%0AEmail: " + email + "%0D%0AMessage: " + message;
+
+    window.location.href = 
+    "mailto:Sunrichchemicals@gmail.com?subject=" + subject + "&body=" + body;
+}
+
+function sendWhatsApp() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let text = "New Inquiry:%0AName: " + name +
+               "%0AEmail: " + email +
+               "%0AMessage: " + message;
+
+    window.open("https://wa.me/9172114024?text=" + text, "_blank");
+}
+</script>
+<script>
+function orderProduct(productName, qtyId) {
+    let qty = document.getElementById(qtyId).value;
+
+    if (qty === "" || qty <= 0) {
+        alert("Please enter quantity!");
+        return;
+    }
+
+    let message = encodeURIComponent(
+        "New Order from Website\n\nProduct: " + productName +
+        "\nQuantity: " + qty + " kg"
+    );
+
+    window.open("https://wa.me/919172114024?text=" + message, "_blank");
+}
+</script>
+</script>
+<footer>
+    © 2026 Sunrich Chemicals | Cosmetic Raw Material Company
+</footer>
+<div><h2>reach us</h2></div>
+<h3>building No.3 balaji darshan,ofc No:202,B wing,Dombivli east,maharashtra 421204</h3>
+<div>
+<h4>enquiry:sales.sunrichchemicals@gmail.com</h4>
+</div>
+
+
+</body>
+</html>
